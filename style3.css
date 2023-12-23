@@ -1,0 +1,256 @@
+/* -----new section------- */
+ol.process-chart {
+    color: #000;
+    counter-reset: item;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 0 0 1em;
+    padding: 0;
+}
+
+ol.process-chart > li,
+ol.process-chart > li > div {
+    position: relative;
+}
+
+ol.process-chart > li {
+    background: linear-gradient(to right, rgba(0,0,0,0.25) 0%, transparent 25%);
+    background-color: #fff;
+    counter-increment: item;
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 1em 1em 1em -1em;
+    min-width: 11.25em;
+    padding: 1em 1em 1em 2em;
+}
+
+ol.process-chart > li:before,
+ol.process-chart > li > div:before {
+    color: rgba(0,0,0,0.75);
+     font-family: "Poppins";
+    text-transform: uppercase;
+}
+
+ol.process-chart > li:before {
+    /* content: 'Step'; */
+    display: inline-block;
+    font-weight: 300;
+    left: 2em;
+    letter-spacing: 0.1em;
+    position: absolute;
+    top: 1em;
+    transform: rotate(90deg);
+    transform-origin: 25% 50%;
+}
+
+ol.process-chart > li:after {
+    border-bottom: 1em solid transparent;
+    border-left: 1em solid #fff;
+    border-right: 0 solid transparent;
+    border-top: 1em solid transparent;
+    content: '';
+    height: 100%;
+    position: absolute;
+    right: -1em;
+    top: 0;
+    width: 0;
+    z-index: 1;
+}
+
+ol.process-chart > li > div {
+    padding: 0 0 0 1em;
+}
+
+ol.process-chart > li > div:before {
+    content: counter(item);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/*** PRIMARY ***/
+ol.process-chart > li:nth-of-type(6n+1) {
+    background-color:#cdced9;
+}
+
+ol.process-chart > li:nth-of-type(6n+1):after {
+    border-left-color: #cdced9;
+}
+
+/*** SECONDARY ***/
+ol.process-chart > li:nth-of-type(6n+2) {
+    background-color: #fe8101;
+}
+
+ol.process-chart > li:nth-of-type(6n+2):after {
+    border-left-color: #fe8101;
+}
+
+/*** TERTIARY ***/
+ol.process-chart > li:nth-of-type(6n+3) {
+    background-color: #cdced9;
+}
+
+ol.process-chart > li:nth-of-type(6n+3):after {
+    border-left-color:#cdced9;
+}
+
+/*** QUATERNARY ***/
+ol.process-chart > li:nth-of-type(6n+4) {
+    background-color:  #fe8101;
+}
+
+ol.process-chart > li:nth-of-type(6n+4):after {
+    border-left-color: #fe8101;
+}
+
+/*** QUINARY ***/
+ol.process-chart > li:nth-of-type(6n+5) {
+    background-color: #cdced9;
+}
+
+ol.process-chart > li:nth-of-type(6n+5):after {
+    border-left-color:  #cdced9;
+}
+
+/*** MEDIA QUERIES ***/
+@media only screen and ( max-width: 40em ) {
+
+    ol.process-chart {
+        margin: 1em 0 0 0;
+        padding: 1em 0 0 0;
+    }
+
+    ol.process-chart > li {
+        background: linear-gradient(rgba(0,0,0,0.25) 0%, transparent 25%);
+        flex-basis: inherit;
+        margin: -1em 0 1em 0;
+        min-width: inherit;
+        padding: 1em 1em 0 1em;
+    }
+
+    ol.process-chart > li:before {
+        left: 1em;
+        top: 2em;
+    }
+
+    ol.process-chart > li:after {
+        border-bottom: 0 solid transparent;
+        border-left: 1em solid transparent!important;
+        border-right: 1em solid transparent;
+        border-top: 1em solid #fff;
+        bottom: -1em;
+        height: 0;
+        left: 0;
+        right: inherit;
+        top: inherit;
+        width: 100%;
+    }
+
+    ol.process-chart > li > div {
+        padding: 1em 1em 0 1em;
+    }
+
+    /*** PRIMARY ***/
+    ol.process-chart > li:nth-of-type(6n+1):after {
+        border-top-color: #cdced9;
+    }
+
+    /*** SECONDARY ***/
+    ol.process-chart > li:nth-of-type(6n+2):after {
+        /*border-top-color: #fe8101;*/
+        border-top-color: #BCBCBC;
+    }
+
+    /*** TERTIARY ***/
+    ol.process-chart > li:nth-of-type(6n+3):after {
+        border-top-color: #cdced9;
+    }
+
+    /*** QUATERNARY ***/
+    ol.process-chart > li:nth-of-type(6n+4):after {
+        /*border-top-color: #fe8101;*/
+        border-top-color: #BCBCBC;
+    }
+
+    /*** QUINARY ***/
+    ol.process-chart > li:nth-of-type(6n+5):after {
+        border-top-color: #cdced9;
+    }
+
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+}
+
+#container {
+    float: left;
+    padding: 1em;
+    width: 100%;
+}
+/* ----2 nd style ------- */
+main {
+  min-width: 300px;
+  max-width: 700px;
+  margin: auto;
+}
+p {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, #ffa737 0%, #c9c9c9 100%);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 20px;
+  counter-increment: section;
+  position: relative;
+  color: #34435e;
+}
+
+p:before {
+  content: counter(section);
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 3.25em;
+  width: 3.25em;
+  background-color: #fe8101;
+  text-align: center;
+  line-height: 1.25em;
+  color: #ffffff;
+  font-size: 1em;
+  display:none!important;/* new added */
+}
+p:nth-child(odd) {
+  /*border-right: 3px solid;*/
+  border-right: 0px solid;
+  padding-left: 0;
+  /*border:none!important; /* new added */
+}
+p:nth-child(odd):before {
+  left: 100%;
+  /*margin-left: -20px;*/
+  margin-left: -25px;
+}
+p:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+p:nth-child(even):before {
+  right: 100%;
+  margin-right: -20px;
+}
+p:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+p:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
